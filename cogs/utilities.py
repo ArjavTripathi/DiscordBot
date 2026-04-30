@@ -31,14 +31,6 @@ class Utility(commands.Cog):
         embed.set_image(url="https://i.imgur.com/pHarayJ.png")
         await interaction.response.send_message(embed=embed)
 
-    @app_commands.command(name="embed_test", description="Show off a custom color embed")
-    async def embed_test(self, interaction: discord.Interaction):
-        embed = discord.Embed(
-            title="Custom Setup Active",
-            description="Slash commands + Cogs are working!",
-            color=0x2ECC71 
-        )
-        await interaction.response.send_message(embed=embed)
 
 async def setup(bot):
     await bot.add_cog(Utility(bot))
