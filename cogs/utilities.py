@@ -11,12 +11,12 @@ class Utility(commands.Cog):
     @app_commands.checks.has_role("Early Supporter")
     async def ping(self, interaction: discord.Interaction):
 
-        rules = """Jokes are fine as long as they aren’t personal and the recipient is alright with the banter. \n 
-           Blatant homophobia, transphobia, racism, misogyny, sexual harassment, etc. towards another member are prohibited. \n 
-            Keep serious drama and or beef out of the server. If you have a problem with someone then either keep it in the DMs or message a moderator. \n
-            NO NSFW AT ALL. \n  
-            Treat others how you want to be treated. This is a community, Please respect one another and be reasonable. \n
-            No Self Promotion of any kind"""
+        rules = """1. Jokes are fine as long as they aren’t personal and the recipient is alright with the banter. \n 
+            2. Blatant homophobia, transphobia, racism, misogyny, sexual harassment, etc. towards another member are prohibited. \n 
+            3. Keep serious drama and or beef out of the server. If you have a problem with someone then either keep it in the DMs or message a moderator. \n
+            4. NO NSFW AT ALL. \n  
+            5. Treat others how you want to be treated. This is a community, Please respect one another and be reasonable. \n
+            6. No Self Promotion of any kind without permission."""
         
         embed = discord.Embed(
             title="Faz League Rules",
