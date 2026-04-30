@@ -20,8 +20,11 @@ class MyBot(commands.Bot):
     async def setup_hook(self):
         for filename in os.listdir('./cogs'):
             if filename.endswith('.py'):
-                await self.load_extension(f'cogs.{filename[:-3]}')
-                print(f'Loaded: {filename}')
+                try:
+                    await self.load_extension(f'cogs.{filename[:-3]}')
+                    print(f'Loaded: {filename}')
+                except Exception as e:
+                    print(f'FAILED loading {filename}: {e}')
 
         synced = await self.tree.sync(guild=GUILD_ID)
         print(f"Synced {len(synced)} commands")
