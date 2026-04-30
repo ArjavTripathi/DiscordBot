@@ -6,6 +6,8 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+GUILD_ID = discord.Object(id=int(os.getenv('guild')))
+
 class MyBot(commands.Bot):
     def __init__(self):
         intents = discord.Intents.default()
@@ -21,7 +23,7 @@ class MyBot(commands.Bot):
                 await self.load_extension(f'cogs.{filename[:-3]}')
                 print(f'Loaded: {filename}')
 
-        synced = await self.tree.sync()
+        synced = await self.tree.sync(guild=GUILD_ID)
         print(f"Synced {len(synced)} commands")
         print()
         print("Commands synced:")
