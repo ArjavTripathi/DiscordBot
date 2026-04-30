@@ -11,9 +11,11 @@ class Utility(commands.Cog):
     @app_commands.checks.has_role("Early Supporter")
     async def ping(self, interaction: discord.Interaction):
 
-        rules = """Jokes are fine as long as they aren’t personal and the recipient is alright with the banter. \n Blatant homophobia, transphobia, racism, misogyny, sexual harassment, etc. towards another member are prohibited. \n 
+        rules = """Jokes are fine as long as they aren’t personal and the recipient is alright with the banter. \n 
+           Blatant homophobia, transphobia, racism, misogyny, sexual harassment, etc. towards another member are prohibited. \n 
             Keep serious drama and or beef out of the server. If you have a problem with someone then either keep it in the DMs or message a moderator. \n
-            NO NSFW AT ALL. \n  Treat others how you want to be treated. This is a community, Please respect one another and be reasonable. \n
+            NO NSFW AT ALL. \n  
+            Treat others how you want to be treated. This is a community, Please respect one another and be reasonable. \n
             No Self Promotion of any kind"""
         
         embed = discord.Embed(
