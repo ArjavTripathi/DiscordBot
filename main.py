@@ -21,7 +21,13 @@ class MyBot(commands.Bot):
                 await self.load_extension(f'cogs.{filename[:-3]}')
                 print(f'Loaded: {filename}')
 
-        await self.tree.sync()
+        synced = await self.tree.sync()
+        print(f"Synced {len(synced)} commands")
+        print()
+        print("Commands synced:")
+        for i in synced:
+            print(i)
+        print()
 
     async def on_ready(self):
         activity = discord.Activity(
