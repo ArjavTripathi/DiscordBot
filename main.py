@@ -8,6 +8,7 @@ load_dotenv()
 
 GUILD_ID = discord.Object(id=int(os.getenv('guild')))
 
+
 class MyBot(commands.Bot):
     def __init__(self):
         intents = discord.Intents.default()

@@ -1,6 +1,7 @@
 import discord
 from discord import app_commands
 from discord.ext import commands
+import config
 
 class Embeds(commands.Cog):
     def __init__(self, bot):
@@ -8,7 +9,7 @@ class Embeds(commands.Cog):
 
     @app_commands.command(name="announce", description="Use this embed for announcements only")
     @app_commands.describe(msg="The text you want to announce")
-    @app_commands.checks.has_role("Early Supporter")
+    @app_commands.checks.has_role(config.ROLE)
     async def announce(self, interaction: discord.Interaction, msg: str):
         embed = discord.Embed(
         title="📢 Announcement",
@@ -34,7 +35,7 @@ class Embeds(commands.Cog):
 
     @app_commands.command(name="miniannounce", description="Use this embed for small announcements only")
     @app_commands.describe(msg="The text you want to announce")
-    @app_commands.checks.has_role("Early Supporter")
+    @app_commands.checks.has_role(config.ROLE)
     async def miniannounce(self, interaction: discord.Interaction, msg:str):
         embed = discord.Embed(
             description=f"📢 **Announcement**\n\n{msg} \n\n ||<@&1453086741794656387>||",

@@ -1,14 +1,14 @@
 import discord
 from discord import app_commands
 from discord.ext import commands
+import config
 
 class Utility(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    
     @app_commands.command(name="rules", description="Send the embed that contains rules")
-    @app_commands.checks.has_role("Early Supporter")
+    @app_commands.checks.has_role(config.ROLE)
     async def ping(self, interaction: discord.Interaction):
 
         rules = (
