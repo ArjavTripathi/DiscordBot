@@ -26,6 +26,7 @@ class MyBot(commands.Bot):
                 except Exception as e:
                     print(f'FAILED loading {filename}: {e}')
 
+        self.tree.copy_global_to(guild=GUILD_ID) 
         synced = await self.tree.sync(guild=GUILD_ID)
         print(f"Synced {len(synced)} commands")
         print()
